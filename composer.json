@@ -1,0 +1,14 @@
+{
+    "name": "luojiangtao/page",
+    "description": "page for aaphp frame work",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luojiangtao",
+            "email": "1368761119@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
