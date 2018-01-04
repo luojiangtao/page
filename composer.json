@@ -9,7 +9,8 @@
             "email": "1368761119@qq.com"
         }
     ],
-    "require": {}
+//    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "psr-4": {
             "luojiangtao\\page\\": "src/"
