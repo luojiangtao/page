@@ -9,6 +9,6 @@
             "email": "1368761119@qq.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {}
 }
