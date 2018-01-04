@@ -9,7 +9,6 @@
             "email": "1368761119@qq.com"
         }
     ],
-//    "minimum-stability": "dev",
     "require": {}
     "autoload": {
         "psr-4": {
