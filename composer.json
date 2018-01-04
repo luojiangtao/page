@@ -9,6 +9,14 @@
             "email": "1368761119@qq.com"
         }
     ],
-    "minimum-stability": "dev",
+//    "minimum-stability": "dev",
     "require": {}
+    "autoload": {
+        "psr-4": {
+            "luojiangtao\\page\\": "src/"
+        },
+        "files": [
+            "src/Page.php"
+        ]
+    }
 }
