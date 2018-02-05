@@ -62,10 +62,10 @@ class Page
         $this->limit_page = $this->now_page - 1;
         $this->next_page  = $this->now_page + 1;
         $this->url        = $_SERVER['REQUEST_URI'];
-        $this->url        = preg_replace("/p=\d+?&?/i", '', $this->url);
+//        去掉 p=数字 参数
+        $this->url        = preg_replace("/p=\d+&?/i", '', $this->url);
         $this->url        = rtrim($this->url,'&');
         $this->url        = rtrim($this->url,'?');
-//        var_dump($this->url);
 
         $this->number_start = $this->now_page - $this->number_show;
         $this->number_end = $this->now_page + $this->number_show;
@@ -85,7 +85,6 @@ class Page
                 $this->number_start=1;
             }
         }
-
     }
 
     /**
@@ -110,38 +109,7 @@ class Page
         if(!$this->count){
             return ;
         }
-        // 自带分页样式，仿造猪八戒网站分页
-        $page_html = '
-            <style>
-        
-            .page {
-                padding: 5px 12px;
-                line-height: 20px;
-                color: #333;
-                border: 1px solid #ddd;
-                border-right: 0px;
-            }
-
-            .page-disable {
-                padding: 5px 12px;
-                line-height: 20px;
-                border: 1px solid #ddd;
-                border-right: 0px;
-                color: #9d9f9c;
-                cursor: default;
-                background: #f5f5f5;
-                text-decoration: none;
-            }
-
-            .page-disable:hover {
-                text-decoration: none !important;
-            }
-
-            .last-page {
-                border-right: 1px solid #ddd;
-            }
-            </style>
-        ';
+        $page_html = '';
         // 首页
         if ($this->now_page > 1) {
             $page_html .= "<a class='page' href='" . $this->url . "'>首页</a>";
@@ -189,6 +157,7 @@ class Page
     }
 }
 
+//测试用
 //var_dump($_GET);
 //$page = new Page(100, 10);
 //echo $page->show();
